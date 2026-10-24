@@ -24,7 +24,7 @@ O QUE FAZ
 
 COMO FUNCIONA
 A extensão conversa com um auxiliar local gratuito (yt-dlp, FFmpeg e aria2), que faz o download direto no seu computador. Instale o auxiliar uma vez pelo GitHub:
-https://github.com/sirm-dev/sirm-downloader-videos/releases/latest
+https://github.com/sirmdev/sirm-downloader-videos/releases/latest
 
 PRIVACIDADE
 Tudo roda localmente. Sem conta, telemetria ou leitura de cookies. Links assinados, cookies e tokens não são gravados.
@@ -35,7 +35,7 @@ LIMITES
 • Use somente com conteúdo que você tem direito de baixar, conforme os termos de cada plataforma e autor.
 
 CÓDIGO ABERTO
-Sugestões, problemas e contribuições: https://github.com/sirm-dev/sirm-downloader-videos
+Sugestões, problemas e contribuições: https://github.com/sirmdev/sirm-downloader-videos
 Apoie o projeto: https://livepix.gg/sirm
 ```
 
@@ -45,8 +45,8 @@ Apoie o projeto: https://livepix.gg/sirm
 - Bloco promocional pequeno 440×280: `store/promo-440x280.png`
 - Bloco promocional marquee 1400×560: `store/marquee-1400x560.png`
 
-**Site oficial:** https://github.com/sirm-dev/sirm-downloader-videos
-**URL de suporte:** https://github.com/sirm-dev/sirm-downloader-videos/issues
+**Site oficial:** https://github.com/sirmdev/sirm-downloader-videos
+**URL de suporte:** https://github.com/sirmdev/sirm-downloader-videos/issues
 
 ## Práticas de privacidade
 
@@ -68,7 +68,7 @@ Apoie o projeto: https://livepix.gg/sirm
 
 **Uso de dados:** Marque que a extensão **não coleta** nenhuma das categorias de dados. Marque as três declarações (não vende dados, não usa para fins não relacionados, não usa para crédito).
 
-**Política de privacidade:** https://github.com/sirm-dev/sirm-downloader-videos/blob/main/PRIVACY.md
+**Política de privacidade:** https://github.com/sirmdev/sirm-downloader-videos/blob/main/PRIVACY.md
 
 ## Distribuição
 - **Visibilidade:** Pública · **Preço:** Gratuito · **Regiões:** Todas

@@ -35,5 +35,5 @@
     "service_worker": "background.mjs",
     "type": "module"
   },
-  "homepage_url": "https://github.com/sirm-dev/sirm-downloader-videos"
+  "homepage_url": "https://github.com/sirmdev/sirm-downloader-videos"
 }

@@ -2,7 +2,7 @@
 <h1 align="center">SirM Downloader Videos</h1>
 <p align="center"><b>Do player para a sua pasta, na melhor qualidade.</b><br>Extensão gratuita e de código aberto para Chrome e Brave no Windows.</p>
 <p align="center">
-  <a href="https://github.com/sirm-dev/sirm-downloader-videos/releases/latest"><b>Baixar o instalador</b></a> ·
+  <a href="https://github.com/sirmdev/sirm-downloader-videos/releases/latest"><b>Baixar o instalador</b></a> ·
   <a href="LEIA-ME.md">Guia de uso</a> ·
   <a href="CONTRIBUTING.md">Como contribuir</a> ·
   <a href="https://livepix.gg/sirm"><b>♥ Apoiar no LivePix</b></a>
@@ -25,7 +25,7 @@
 
 A extensão conversa com um **auxiliar local** (yt-dlp, FFmpeg e aria2). Ele faz o download de verdade e é instalado à parte, sem precisar de administrador.
 
-1. Baixe o ZIP mais recente em [Releases](https://github.com/sirm-dev/sirm-downloader-videos/releases/latest), extraia e execute **Instalar.cmd**.
+1. Baixe o ZIP mais recente em [Releases](https://github.com/sirmdev/sirm-downloader-videos/releases/latest), extraia e execute **Instalar.cmd**.
 2. Instale a extensão pela Chrome Web Store (quando publicada) **ou** carregue a pasta `extension` em `chrome://extensions` → *Modo do desenvolvedor* → *Carregar sem compactação*.
 3. Na página do vídeo, clique no ícone do **SirM Downloader Videos**.
 
@@ -39,7 +39,7 @@ O SirM Downloader Videos é e continuará gratuito. Se ele te poupa tempo, apoie
 
 Ideias, bugs e melhorias são bem-vindos:
 
-- **Encontrou um problema ou tem uma ideia?** Abra uma [issue](https://github.com/sirm-dev/sirm-downloader-videos/issues/new/choose).
+- **Encontrou um problema ou tem uma ideia?** Abra uma [issue](https://github.com/sirmdev/sirm-downloader-videos/issues/new/choose).
 - **Quer mexer no código?** Faça um fork, crie uma branch e abra um pull request. Toda mudança é revisada antes de entrar. Veja o [CONTRIBUTING](CONTRIBUTING.md).
 
 ```powershell

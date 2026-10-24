@@ -17,4 +17,4 @@ Nenhum. As únicas conexões externas são as requisições ao site do vídeo, f
 Limpe o histórico da fila pelo botão **Limpar histórico** ou removendo a extensão. Seus vídeos baixados nunca são apagados pela extensão.
 
 ## Contato
-Abra uma issue em https://github.com/sirm-dev/sirm-downloader-videos/issues
+Abra uma issue em https://github.com/sirmdev/sirm-downloader-videos/issues
