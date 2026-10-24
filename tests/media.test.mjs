@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { mediaKind, mergeCandidates } from '../extension/media.mjs';
+import { mediaKind, mergeCandidates, preferredSource } from '../extension/media.mjs';
 test('recognizes manifests and video types without treating TS fragments as full videos', () => {
   assert.equal(mediaKind('https://cdn.test/v.m3u8?token=a'), 'HLS');
   assert.equal(mediaKind('https://cdn.test/v.mpd'), 'DASH');
@@ -20,4 +20,9 @@ test('blocks YouTube pages and media hosts as required by the Chrome Web Store p
   for (const url of ['https://cdn.test/v.m3u8','https://notyoutube.com/x','https://youtube.com.evil.test/x','not a url'])
     assert.equal(blockedSite(url), false, url);
   assert.deepEqual(mergeCandidates([{url:'https://youtu.be/x'},{url:'https://cdn.test/v.mp4'}]).map(s=>s.url),['https://cdn.test/v.mp4']);
+});
+
+test('preferredSource prefers manifests with referer and ignores fragments',()=>{
+  assert.deepEqual(preferredSource([{url:'https://a.test/v.mp4'},{url:'https://a.test/s.ts'},{url:'https://a.test/m.m3u8',referer:'https://p.test/'}]),{url:'https://a.test/m.m3u8',kind:'HLS',referer:'https://p.test/'});
+  assert.equal(preferredSource([]),undefined);
 });

@@ -6,8 +6,8 @@ O SirM Downloader Videos **não coleta, não vende e não envia dados pessoais**
 
 ## O que a extensão acessa e por quê
 - **Aba atual e players (`activeTab`, `scripting`)**: para encontrar elementos de vídeo na página que você abriu.
-- **Requisições de rede (`webRequest`, acesso a sites HTTP/HTTPS)**: para detectar arquivos e playlists de vídeo (MP4, HLS, DASH) carregados pelo player, inclusive de CDNs. Só os endereços de mídia são lidos. Cookies e o cabeçalho Authorization não são copiados.
-- **Armazenamento local (`storage`)**: guarda no seu navegador a lista de mídias da aba durante a sessão e o progresso da fila de aulas (endereços das páginas de aula, nomes, estados e qualidade). Links assinados de mídia, Referer, cookies e tokens não são gravados.
+- **Requisições de rede (`webRequest`, acesso a sites HTTP/HTTPS)**: para detectar arquivos e playlists de vídeo (MP4, HLS, DASH) carregados pelo player, inclusive de CDNs. A partir da 1.2.0, toda aba HTTP(S) é observada desde o carregamento, para o popup já abrir com o vídeo detectado. São lidos os endereços de mídia e o Referer da requisição de mídia. Cookies e o cabeçalho Authorization não são copiados. Abas já abertas antes de instalar ou atualizar a extensão só passam a ser observadas depois da próxima navegação ou recarga.
+- **Armazenamento (`storage`)**: o endereço da página e as mídias detectadas em cada aba ficam só em memória e em `storage.session`, enquanto durar a sessão do navegador (saem ao fechar a aba ou navegar para outra página). Eles não são enviados a lugar nenhum e nunca são gravados em `storage.local`; só o endereço que você escolher baixar vai para o auxiliar local. Em `storage.local` fica apenas o progresso da fila de aulas (endereços das páginas de aula, nomes, estados e qualidade); links assinados de mídia, Referer, cookies e tokens não são gravados ali.
 - **Auxiliar local (`nativeMessaging`)**: envia o endereço escolhido ao programa auxiliar instalado no seu computador, que faz o download com yt-dlp, FFmpeg e aria2 direto do site de origem.
 
 ## Dados compartilhados
