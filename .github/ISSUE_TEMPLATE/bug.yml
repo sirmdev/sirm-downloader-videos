@@ -1,0 +1,38 @@
+name: Problema
+description: Algo não funcionou como esperado
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Não cole links assinados, cookies, tokens nem endereços de cursos privados. Remova-os antes de enviar."
+  - type: input
+    id: version
+    attributes:
+      label: Versão da extensão
+      placeholder: "1.1.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Navegador
+      options: [Chrome, Brave, Edge, Outro]
+  - type: textarea
+    id: steps
+    attributes:
+      label: O que você fez
+      description: Passo a passo até o problema
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: O que aconteceu
+      description: Inclua a mensagem exibida no painel
+    validations:
+      required: true
+  - type: input
+    id: site
+    attributes:
+      label: Tipo de site
+      placeholder: "ex.: Curseduca, site com player HLS"

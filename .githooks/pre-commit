@@ -1,0 +1,4 @@
+#!/bin/sh
+set -eu
+npm run lint
+node --test tests/core.test.mjs tests/queue.test.mjs tests/lessons.test.mjs tests/media.test.mjs tests/batch.test.mjs tests/capture.test.mjs

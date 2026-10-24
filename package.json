@@ -1,0 +1,28 @@
+{
+  "name": "sirm-downloader-videos",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "lint": "node scripts/check.mjs",
+    "check": "npm run lint && npm test",
+    "build:store": "node scripts/build.mjs store",
+    "release": "node scripts/build.mjs release",
+    "icons": "python scripts/brand/make-icons.py"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.13.0",
+    "globals": "^17.13.0"
+  },
+  "description": "Extensão gratuita e open source para baixar vídeos compatíveis (MP4, HLS, DASH) no Chrome e Brave.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sirm-dev/sirm-downloader-videos.git"
+  }
+}

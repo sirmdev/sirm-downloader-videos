@@ -1,0 +1,24 @@
+node_modules/
+test-results/
+*.part
+native/config.json
+Instalado/
+PASTA-DA-EXTENSAO.txt
+work/
+outputs/
+.ai-context/
+.env
+.env.*
+!.env.example
+*.local
+*.log
+native/partials/
+native/locks/
+dist/
+# Notas locais do mantenedor e capturas com dados reais (não publicar)
+AGENTS.md
+AGENTS.override.md
+VERIFICACAO.md
+ATUALIZAR-*.txt
+ATIVAR-NO-NAVEGADOR.txt
+preview*.png
