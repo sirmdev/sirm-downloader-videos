@@ -27,7 +27,9 @@ A extensão conversa com um **auxiliar local** (yt-dlp, FFmpeg e aria2). Ele faz
 
 1. Baixe o ZIP mais recente em [Releases](https://github.com/sirmdev/sirm-downloader-videos/releases/latest), extraia e execute **Instalar.cmd**.
 2. Instale a extensão pela Chrome Web Store (quando publicada) **ou** carregue a pasta `extension` em `chrome://extensions` → *Modo do desenvolvedor* → *Carregar sem compactação*.
-3. Na página do vídeo, clique no ícone do **SirM Downloader Videos**.
+3. Na página do vídeo, clique no ícone do **SirM Downloader Videos**: o popup já abre com o vídeo detectado. Clique em **Baixar esta aula** (ou, numa página de curso da Curseduca, em **Baixar as N que faltam**). A engrenagem abre o painel completo.
+
+> **Atualizando de uma versão anterior?** Aguarde os downloads ativos terminarem, feche o painel antigo e recarregue a extensão em `chrome://extensions`.
 
 O instalador baixa as ferramentas por HTTPS e confere o SHA-256 de cada uma. Os vídeos vão para `Downloads\TurboVideo` (nome mantido por compatibilidade). Detalhes, limites e remoção estão no [LEIA-ME](LEIA-ME.md).
 

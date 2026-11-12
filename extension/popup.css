@@ -1,0 +1,32 @@
+/* Popup compacto (estilo cartões). Reaproveita fonte e tokens de style.css; aqui só o layout de 340 px e os cartões. */
+html,body{width:340px;margin:0}
+body{min-height:0;background:var(--bg);font-size:14px;overflow-x:hidden}
+.pp-h{display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid var(--line)}
+.pp-logo{width:28px;height:28px;border-radius:8px;flex-shrink:0}
+.pp-t{font-weight:700;flex:1}
+button.pp-ic{background:transparent;color:var(--muted);border:0;padding:4px 6px;font-size:16px;line-height:1;border-radius:8px}
+button.pp-ic:hover:not(:disabled){background:var(--raise);color:var(--ink)}
+.pp-b{padding:14px;display:flex;flex-direction:column;gap:10px}
+.pp-site{text-align:center;font-weight:700;font-size:16px;overflow-wrap:anywhere}
+.pp-site:empty{display:none}
+.pp-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;margin:0;box-shadow:none}
+.pp-card[hidden]{display:none}
+.pp-row{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.pp-sub{color:var(--muted);font-size:12px;margin:4px 0 10px;overflow-wrap:anywhere;line-height:1.4}
+.pp-msg{color:var(--soft);font-size:13px;margin:0;line-height:1.5;overflow-wrap:anywhere}
+.pp-msg.pp-err{color:var(--danger);margin:8px 0}
+.pp-card button.pp-btn{display:block;width:100%;margin:0;padding:11px;font-size:15px;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--purple-hi),var(--purple));box-shadow:none}
+.pp-card button.pp-btn:hover:not(:disabled){background:linear-gradient(135deg,#a948f0,#8f12e0)}
+.pp-card button.pp-btn2{display:block;width:100%;margin:8px 0 0;padding:9px;font-size:13px;font-weight:600;color:var(--soft);background:var(--raise);border:1px solid var(--line-strong)}
+.pp-card button.pp-btn2:hover:not(:disabled){background:#2c2040}
+.pp-card select.pp-chip{width:auto;padding:2px 6px;font-size:12px;border-radius:999px;background:var(--raise);border-color:var(--line-strong);color:var(--soft)}
+.pp-bar{height:6px;border-radius:9px;background:var(--raise);overflow:hidden;margin:8px 0 4px}
+.pp-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--purple-hi),var(--lit));transition:width .3s}
+.pp-bar.pp-wait i{width:35%;animation:pp-slide 1.2s ease-in-out infinite alternate}
+@keyframes pp-slide{from{margin-left:0}to{margin-left:65%}}
+.pp-ok{color:var(--ok)}
+.pp-f{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:0 14px 12px;color:var(--muted);font-size:12px}
+button.pp-fl{background:transparent;color:var(--lit);border:0;padding:2px 4px;font-size:12px;font-weight:600;border-radius:6px;flex-shrink:0}
+button.pp-fl:hover:not(:disabled){background:var(--raise);color:var(--soft)}
+.pp-f .pp-ok{color:var(--ok)}
+.pp-link{display:inline-block;margin-top:10px;font-size:13px;font-weight:600}

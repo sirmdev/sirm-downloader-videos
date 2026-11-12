@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "SirM Downloader Videos",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Baixe vídeos compatíveis (MP4, HLS, DASH) no seu computador, com escolha de qualidade. Requer o auxiliar local gratuito.",
   "minimum_chrome_version": "120",
   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2e54xTEvA5RoaMu6sdB48nmb7KcQUlrsWpHBoySK75DUJKruBwm/lBtNZiosJ2/M6D5ZQ6JzIA2btfQw1fBLX7e6VPLC0Jj1O0OyjQJpo4fg9sdnO9NfGLAa2md9gPOkFCjJlfnMG3V2aVhR+VZEB8NQgG/MdfV/s/OAxcFn1hEnVCZI0AsnMcgrAEpNPk3mU+7+dnNZUU05eeVgBn3qBRfQrTpyRwLvULLE3CrMwe4/LI5JuSQ+CkjULUvOJpAJJIlGd4VxTpErqQ1ievHtha4T7hCX5bt4ltMJQpbJu1WOmW5Mf50xF2EZ1VZXZ07sPfM93IhKFTfB0tWSy/YgawIDAQAB",
@@ -23,6 +23,7 @@
     "https://*/*"
   ],
   "action": {
+    "default_popup": "popup.html",
     "default_title": "SirM Downloader Videos — baixar vídeo desta aba",
     "default_icon": {
       "16": "icons/icon-16.png",

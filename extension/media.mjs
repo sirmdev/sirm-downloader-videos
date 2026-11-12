@@ -21,3 +21,17 @@ export function mergeCandidates(...groups) {
   }
   return [...found.values()].slice(-150);
 }
+function httpUrl(value){
+  try{const u=new URL(value);return ['http:','https:'].includes(u.protocol)&&!u.username&&!u.password?u.href:null;}catch{return null;}
+}
+export function preferredSource(items){
+  return items.map(item=>{
+    const url=httpUrl(item?.url);if(!url)return null;
+    if(/\.(ts|m4s|vtt|srt)$/i.test(new URL(url).pathname))return null;
+    const detected=mediaKind(url);
+    const kind=detected||(['HLS','DASH','Vídeo'].includes(item.kind)?item.kind:null);
+    if(!kind)return null;
+    const referer=httpUrl(item.referer)||'';
+    return {url,kind,referer};
+  }).filter(Boolean).sort((a,b)=>((a.kind==='Vídeo')-(b.kind==='Vídeo'))||Number(Boolean(b.referer))-Number(Boolean(a.referer)))[0];
+}

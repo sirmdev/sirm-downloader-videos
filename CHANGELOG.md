@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.2.0 — 2026-10-24
+- Popup compacto: o clique no ícone abre um popup pequeno com o cartão "Esta aula" (qualidade e **Baixar esta aula**) e, em página de curso, o cartão "Curso inteiro" (**Baixar as N que faltam**).
+- Detecção automática desde o carregamento: as abas HTTP(S) são observadas sem precisar clicar no ícone antes nem recarregar a página.
+- Os downloads e a fila do curso rodam em segundo plano. Continuam com o popup ou o painel fechados, e reabrir qualquer um deles mostra o estado atual sem iniciar nada sozinho.
+- Em página de curso, **Baixar esta aula** salva na pasta do curso e do módulo, com o nome numerado que a fila usaria, e marca a aula como baixada.
+- Na fila do curso, arquivo que já existe na pasta conta como já baixado ("Já estava na pasta"), e não como falha.
+- O painel completo continua disponível pela engrenagem do popup, com origem manual, nome do arquivo, conexões, seleção de aulas e captura do player.
+- Depois de atualizar: aguarde os downloads ativos terminarem, feche o painel antigo e recarregue a extensão em `chrome://extensions`.
+
 ## 1.1.0 — 2026-10-24
 - Novo visual com a identidade SirM: paleta roxa, fonte Outfit empacotada, ícones da extensão e etapas numeradas no painel.
 - YouTube bloqueado na extensão e no auxiliar, conforme a política da Chrome Web Store (erro permanente `unsupported_site`).

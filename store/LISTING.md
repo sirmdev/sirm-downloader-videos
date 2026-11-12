@@ -51,18 +51,18 @@ Apoie o projeto: https://livepix.gg/sirm
 ## Práticas de privacidade
 
 **Finalidade única:**
-> Detectar vídeos compatíveis na aba atual e enviá-los ao auxiliar local instalado pelo usuário, que faz o download para uma pasta do computador.
+> Detectar vídeos compatíveis nas abas HTTP(S) que o usuário abre e, quando ele pede, enviá-los ao auxiliar local instalado pelo usuário, que faz o download para uma pasta do computador.
 
 **Justificativa das permissões:**
 
 | Permissão | Justificativa |
 |---|---|
-| `activeTab` | Ler a aba em que o usuário clicou no ícone para encontrar o player de vídeo. |
+| `activeTab` | Ler a aba em que o usuário abriu o popup para mostrar o vídeo e o curso dela. A observação contínua das abas vem do acesso a sites e do `webRequest`, abaixo. |
 | `scripting` | Procurar elementos `<video>` em todos os frames da aba e ler a lista de aulas quando o usuário pede. |
-| `storage` | Guardar localmente as mídias detectadas na sessão e o progresso da fila de aulas. Nada é enviado para fora. |
+| `storage` | `storage.session`: endereço da página e mídias detectadas em cada aba, só enquanto durar a sessão do navegador. `storage.local`: progresso da fila de aulas, sem links de mídia. Nada é enviado para fora. |
 | `webRequest` | Detectar, pelo tipo de resposta, as playlists HLS/DASH e arquivos de vídeo carregados pelo player. Nenhuma requisição é bloqueada ou alterada. |
 | `nativeMessaging` | Enviar o endereço escolhido ao auxiliar local (`com.turbovideo.downloader`), que executa o download. |
-| Acesso a sites (`http://*/*`, `https://*/*`) | Os players e CDNs de vídeo ficam em domínios variados e imprevisíveis. A detecção precisa observar as respostas de mídia de qualquer site que o usuário abrir. |
+| Acesso a sites (`http://*/*`, `https://*/*`) | Os players e CDNs de vídeo ficam em domínios variados e imprevisíveis. Desde a 1.2.0, toda aba HTTP(S) é observada desde o carregamento, para o popup já abrir com o vídeo detectado. O endereço da página e as mídias detectadas ficam só em memória e em `storage.session` enquanto durar a sessão do navegador, não são enviados a lugar nenhum (só o endereço que o usuário escolhe baixar vai ao auxiliar local) e nunca vão para `storage.local`. Abas já abertas antes de instalar ou atualizar só são observadas depois da próxima navegação ou recarga. |
 
 **Código remoto:** Não. Todo o JavaScript está no pacote.
 
